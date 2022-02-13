@@ -4,7 +4,7 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Jeremy Jakobsons Portfolio</title>
-        <link rel="stylesheet" href="./assets/style.css">
+        <link rel="stylesheet" href="./assets/css/style.css">
         <!-- Imporing google Fonts - Lato-->
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
         <style>
@@ -13,6 +13,7 @@
     </head>
 
     <body>
+        <!-- Header & Nav -->
         <header>
             <h1>
                 <a href="/index.html">
@@ -36,40 +37,49 @@
 
         <!-- About Me section begins -->
         <section id="about-me" class="hero">
-            <div class="hero-intro">
-                <h2 class="section-title primary border">
-                    Who I am
-                </h2>
-            </div>
-            <div>
-                Hey there! I'm Jeremy Nice to meet you. 
-                <br />
-                I am an Agile Coach, and a full stack Web Developer in training. 
-                <br />
-                I am based in the Metro Detroit area! 
-            </div>
-            <img src="./assets/images/OST_Kickoff_Headshots-262.jpg" alt="headshot of Jeremy in a blue shirt and glasses" />
+        <div class="hero-intro">
+            <h2 class="section-title primary border">
+                Who I am
+            </h2>
+        </div>
+            <article class="intro">
+                <div>
+                    Hey there! I'm Jeremy Nice to meet you. 
+                    <br />
+                    I am an Agile Coach, and a full stack Web Developer in training, 
+                    <br />
+                    based in the Metro Detroit area! 
+                </div>
+                <img src="./assets/images/OST_Kickoff_Headshots-262.jpg" alt="headshot of Jeremy in a blue shirt and glasses" />
+            </article>    
         </section>
 
         <!-- My work section begins -->
         <section id="my-projects" class="projects">
-            <div>
+            <div class="flex-row">
                 <h2 class="section-title primary border">
                 My Work
                 </h2>
             </div>
-            <div  class="project-item">
+
+            <!-- First Project -->
+            <article class="main-project project-item">
                 <a href="https://jjakobsons87.github.io/run-buddy/"  />
-                <img src="./assets/images/run-buddy-sc.png" alt="a screenshot of the Run Buddy landing page" class="main-image"/>
-                <div>
-                    Run Buddy Website
-                </div>
-            </div>
+                <img src="./assets/images/run-buddy-sc.png" alt="a screenshot of the Run Buddy landing page" />
+            </article>
+
+            <!-- Second Project -->
             <div class="project-item">
                 <a href="https://jjakobsons87.github.io/challengeOneRefactor/" />
                 <img src="./assets/images/horiseon-sc.png" alt="screen shot of the Horiseon website landing page" />
                 
             </div>
+
+            <!-- Third Project -->
+            <article class="project-item">
+                <a href="" />
+                <img src="./assets/images/pexels-alleksana-4271927.jpg" />
+            </article>
 
         </section>
 
@@ -80,7 +90,21 @@
                     Get in Touch! 
                 </h2>
             </div>
+            <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
+            <div class="badge-base LI-profile-badge" data-locale="en_US" data-size="medium" data-theme="light" data-type="VERTICAL" data-vanity="jeremy-jakobsons-spc-6a976b68" data-version="v1">
+                <a class="badge-base__link LI-simple-link" 
+                href="https://www.linkedin.com/in/jeremy-jakobsons-spc-6a976b68?trk=profile-badge">Jeremy Jakobsons, SPC
+                </a>
+            </div>
+              
         </section>
+
+        <footer>
+            <h2>Made in Detroit</h2>
+            <div>
+                &copy; 2022 Jeremy Jakobsons
+            </div>
+        </footer>
     </body>
     
 </html>

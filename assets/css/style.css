@@ -13,12 +13,17 @@
 }
 
 header {
-    padding: 20px 35px;
+    padding: 15px 25px;
     background-color: var(--primary-color);
-    background-position: 100%;
+    /* background-position: 100%; */
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+     position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    background-size: cover;
+    z-index: 9999;
 }
 
 header h1 {
@@ -26,8 +31,7 @@ header h1 {
     margin: 0;
     font-size: 36px;
     color: var(--secondary-color);
-    align-items: center;
-    background-color: var(--primary-color);
+    /* align-items: center; */
 }
 
 header a {
@@ -61,6 +65,31 @@ header nav ul li a:hover {
     text-shadow: none;
 }
 
+/* Footer styling */
+footer {
+    background-color: var(--primary-color);
+    padding: 40px 35px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+footer h2 {
+    color: var(--secondary-color);
+    font-size: 30px;
+    margin: 0;
+}
+
+footer div {
+    color: var(--secondary-color);
+    text-align: right;
+}
+
+section {
+    padding: 60px;
+}
+
 /* Intro styling start  */
 .hero {
     display: flex;
@@ -83,6 +112,14 @@ header nav ul li a:hover {
     text-align: center;
 }
 
+.intro {
+    font-size: 28px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
 .hero img {
     max-width: 15%;
 }
@@ -90,16 +127,21 @@ header nav ul li a:hover {
 /* Section title styling  */
 .section-title {
     font-size: 36px;
-    color: var(--primary-color);
-    text-decoration: underline var(--secondary-color);
+    border-bottom: 3px solid;
+    color: var(--secondary-color);
+    padding-bottom: 20px;
+    text-decoration: underline var(--primary-color);
     text-align: center;
+    margin: 0 auto 35px auto;
+    width: 50%;
 }
 
 .primary-border {
     border-color: var(--primary-color);
 }
 
-.projects {
+/* Start of projects section styling */
+.project-item {
     width: 100%;
     margin: 0 auto;
     display: flex;
@@ -112,10 +154,18 @@ header nav ul li a:hover {
     border-color: var(--secondary-color);
 } */
 
-.main-image {
+.main-project {
     max-width: 75%;
+}
+
+.project-item img:hover {
+    background: rgba(0, 0, 0, .5);
+    color: var(--primary-color);
+    border-radius: 15px;
+    text-shadow: none;
 }
 
 .project-item img {
     max-width: 40%;
+    border-radius: 15px;
 }
