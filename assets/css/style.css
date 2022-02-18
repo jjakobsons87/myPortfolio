@@ -2,6 +2,7 @@
     --primary-color: #232a34; 
     --secondary-color: #05a081; 
     --tertiary-color: #7f90a9;
+    --fourth-color: #0572a0;
 }
 
 * {
@@ -12,6 +13,7 @@
     background-color: var(--tertiary-color);
 }
 
+/* Header Styling begin */
 header {
     padding: 15px 25px;
     background-color: var(--primary-color);
@@ -37,10 +39,13 @@ header h1 {
 header a {
     text-decoration: none;
     color: var(--secondary-color);
+    background-color: var(--primary-color);
 }
 
+/* Nav styling */ 
 header nav {
     margin: 7px 0;
+    background-color: var(--primary-color);
 }
 
 header nav ul {
@@ -56,6 +61,7 @@ header nav ul li a {
     font-weight: bold;
     font-size: 1.55vw;
     text-shadow: 0 0 10px rgba(0, 0, 0, .5); 
+    background-color: var(--primary-color);
 }
 
 header nav ul li a:hover {
@@ -64,8 +70,9 @@ header nav ul li a:hover {
     border-radius: 10px;
     text-shadow: none;
 }
+/* End header/nav styling */
 
-/* Footer styling */
+/* Footer styling begin */
 footer {
     background-color: var(--primary-color);
     padding: 40px 35px;
@@ -85,6 +92,8 @@ footer div {
     color: var(--secondary-color);
     text-align: right;
 }
+/* end footer styling */
+
 
 section {
     padding: 60px;
@@ -120,24 +129,29 @@ section {
     justify-content: space-around;
 }
 
+.intro img {
+    position: absolute;
+}
+
 .hero img {
     max-width: 15%;
 }
+/*end intro section styling*/ 
 
 /* Section title styling  */
 .section-title {
     font-size: 36px;
     border-bottom: 3px solid;
-    color: var(--secondary-color);
+    color: var(--fourth-color);
     padding-bottom: 20px;
-    text-decoration: underline var(--primary-color);
+    /* text-decoration: underline var(--primary-color); */
     text-align: center;
     margin: 0 auto 35px auto;
     width: 50%;
 }
 
 .primary-border {
-    border-color: var(--primary-color);
+    /* border-color: var(--primary-color); */
 }
 
 /* Start of projects section styling */
