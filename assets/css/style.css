@@ -44,8 +44,9 @@ header a {
 
 /* Nav styling */ 
 header nav {
-    margin: 7px 0;
+    margin: 0;
     background-color: var(--primary-color);
+    align-items: center;
 }
 
 header nav ul {
@@ -58,7 +59,7 @@ header nav ul {
 }
 
 header nav ul li a {
-    padding: 10px 15px;
+    padding: 5px 10px;
     font-weight: bold;
     font-size: 1.55vw;
     text-shadow: 0 0 10px rgba(0, 0, 0, .5); 
@@ -110,10 +111,11 @@ section {
 }
 
 .hero-intro {
-    width: 35%;
+    width: 100%;
     text-align: left;
     margin: 3.5%;
     line-height: 1.2;
+     vertical-align: auto;
 }
 
 .hero-intro h2 {
@@ -122,17 +124,19 @@ section {
 }
 
 .intro {
-    font-size: 28px;
+    font-size: 24px;
     width: 100%;
+    flex: 1;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
 }
 
-.intro img {
-    position: relative;
-    max-width: 50%;
-
+.img {
+    flex: 1;
+    /* background-image: url("../images/OST_Kickoff_Headshots-262.jpg"); */
+    background-position: center;
+    background-size: cover;
 }
 /*end intro section styling*/ 
 
@@ -146,10 +150,6 @@ section {
     margin: 0 auto 35px auto;
     width: 50%;
     text-decoration: none;
-}
-
-.decoration {
-    text-decoration: underline;
 }
 
 /* Start of projects section styling */
