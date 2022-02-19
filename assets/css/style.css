@@ -137,6 +137,7 @@ section {
     /* background-image: url("../images/OST_Kickoff_Headshots-262.jpg"); */
     background-position: center;
     background-size: cover;
+    padding: 0 10px;
 }
 /*end intro section styling*/ 
 
@@ -154,33 +155,71 @@ section {
 
 /* Start of projects section styling */
 .projects {
-    width: 100%;
-    margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
 }
 
 .project-item {
-    margin: 20px;
-    flex: 1;
+    position: relative;
+    width: 50%;
 }
 
 .project-item img {
+    opacity: 1;
+    display: block;
+    width: auto;
+    height: auto;
+    transition: 0.5s ease;
+    backface-visibility: hidden;
     width: 100%;
 }
 
-
-.project-item img:hover {
-    opacity: 0.5;
+.center {
+    transition: 0.5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% -50%);
+    -ms-transform: translate(-50% -50%);
+    padding: 12px 12px;
+    text-align: center;
 }
 
-/* .main-project img {
+.project-item:hover img {
+    opacity: 0.1;
+    background-color: white;
+}
 
-} */
-.project-item img {
-    max-width: 50%;
-    border-radius: 15px;
+.project-item:hover .center {
+    opacity: .5;
+}
+
+.text {
+    color: var(--fourth-color);
+    font-size: 3vw;
+    font-weight: bolder;
+    padding: 32px 32px;
+    width: 100%;
+    line-height: 1.5;
+}
+
+.project-item:first-child {
+    width: 200%;
+}
+
+/*  Contact me section  */
+.decoration {
+    font-size: 48px;
+    text-align: center;
+}
+
+/* Misc Utilities  */
+.flex-row {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    font-size: 20vw;
 }
 
 /* media queries */
@@ -199,7 +238,7 @@ section {
     }
 
     header nav ul {
-        margin-top: 22px;
+        margin-top: 20px;
         width: 100%;
         justify-content: left;
     }
@@ -213,10 +252,6 @@ section {
         width: 100%;
     }
 
-    /* .hero-intro, {
-        width: 100%;
-    } */
-
     .intro {
         text-align: center;
         font-size: 26px;
@@ -224,10 +259,6 @@ section {
 
     .section-title {
         width: 80%;
-    }
-
-    .project-item {
-        flex: 0 70%;
     }
 }
 
@@ -241,10 +272,10 @@ section {
 /* Media Query for mobile phones and smaller */
 @media screen and (max-width: 575px) {
     .section-title {
-        width: 100%;
+        width: 95%;
     }
 
-    .project-item {
-        flex: 0 100%;
+    .intro {
+        font-size: 20px;
     }
 }
