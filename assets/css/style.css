@@ -17,7 +17,7 @@
 header {
     padding: 15px 25px;
     background-color: var(--primary-color);
-    /* background-position: 100%; */
+    background-position: 100%;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -33,7 +33,7 @@ header h1 {
     margin: 0;
     font-size: 36px;
     color: var(--secondary-color);
-    /* align-items: center; */
+    background-color: var(--primary-color);
 }
 
 header a {
@@ -54,6 +54,7 @@ header nav ul {
     justify-content: space-between;
     align-items: center;
     list-style: none;
+    background-color: var(--primary-color);
 }
 
 header nav ul li a {
@@ -61,7 +62,6 @@ header nav ul li a {
     font-weight: bold;
     font-size: 1.55vw;
     text-shadow: 0 0 10px rgba(0, 0, 0, .5); 
-    background-color: var(--primary-color);
 }
 
 header nav ul li a:hover {
@@ -75,7 +75,7 @@ header nav ul li a:hover {
 /* Footer styling begin */
 footer {
     background-color: var(--primary-color);
-    padding: 40px 35px;
+    padding: 25px 20px;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -84,12 +84,14 @@ footer {
 
 footer h2 {
     color: var(--secondary-color);
+    background-color: var(--primary-color);
     font-size: 30px;
     margin: 0;
 }
 
 footer div {
     color: var(--secondary-color);
+    background-color: var(--primary-color);
     text-align: right;
 }
 /* end footer styling */
@@ -111,13 +113,11 @@ section {
     width: 35%;
     text-align: left;
     margin: 3.5%;
-    font-size: 18px;
     line-height: 1.2;
 }
 
 .hero-intro h2 {
     font-size: 36px;
-    text-decoration: underline;
     text-align: center;
 }
 
@@ -130,11 +130,9 @@ section {
 }
 
 .intro img {
-    position: absolute;
-}
+    position: relative;
+    max-width: 50%;
 
-.hero img {
-    max-width: 15%;
 }
 /*end intro section styling*/ 
 
@@ -144,14 +142,18 @@ section {
     border-bottom: 3px solid;
     color: var(--fourth-color);
     padding-bottom: 20px;
-    /* text-decoration: underline var(--primary-color); */
     text-align: center;
     margin: 0 auto 35px auto;
     width: 50%;
+    text-decoration: none;
+}
+
+.decoration {
+    text-decoration: underline;
 }
 
 /* Start of projects section styling */
-.project-item {
+.projects {
     width: 100%;
     margin: 0 auto;
     display: flex;
@@ -159,23 +161,90 @@ section {
     justify-content: space-around;
 }
 
-/* .projects div {
-    border: 1mm;
-    border-color: var(--secondary-color);
-} */
-
-.main-project {
-    max-width: 75%;
-}
-
-.project-item img:hover {
-    background: rgba(0, 0, 0, .5);
-    color: var(--primary-color);
-    border-radius: 15px;
-    text-shadow: none;
+.project-item {
+    margin: 20px;
+    flex: 1;
 }
 
 .project-item img {
-    max-width: 40%;
+    width: 100%;
+}
+
+
+.project-item img:hover {
+    opacity: 0.5;
+}
+
+/* .main-project img {
+
+} */
+.project-item img {
+    max-width: 50%;
     border-radius: 15px;
+}
+
+/* media queries */
+
+/* Media Query for smaller desktop screens and smaller */
+@media screen and (max-width: 980px) {
+    header {
+        padding-bottom: 0;
+        justify-content: center;
+        position: relative;
+    }
+
+    header h1 {
+        width: 100%;
+        text-align: center;
+    }
+
+    header nav ul {
+        margin-top: 22px;
+        width: 100%;
+        justify-content: left;
+    }
+
+    header nav ul li a {
+        font-size: 16px;
+    }
+
+    footer, footer div {
+        text-align: center;
+        width: 100%;
+    }
+
+    /* .hero-intro, {
+        width: 100%;
+    } */
+
+    .intro {
+        text-align: center;
+        font-size: 26px;
+    }
+
+    .section-title {
+        width: 80%;
+    }
+
+    .project-item {
+        flex: 0 70%;
+    }
+}
+
+/* Media Query for tablets and smaller */
+@media screen and (max-width: 768px) {
+    section {
+        padding: 30px 15px;
+    }
+}
+
+/* Media Query for mobile phones and smaller */
+@media screen and (max-width: 575px) {
+    .section-title {
+        width: 100%;
+    }
+
+    .project-item {
+        flex: 0 100%;
+    }
 }
